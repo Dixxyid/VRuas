@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Tour</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="tour.js"></script>
+</head>
+<body>
+    <a-assets>
+        <!-- Tambahkan gambar sampai image20 -->
+        <img id="image1" crossorigin="anonymous" src="assets/image/01.png" title="Image 1">
+        <img id="image2" crossorigin="anonymous" src="assets/image/02.png" title="Image 2">
+        <img id="image3" crossorigin="anonymous" src="assets/image/03.png" title="Image 3">
+        <img id="image4" crossorigin="anonymous" src="assets/image/04.png" title="Image 4">
+        <img id="image5" crossorigin="anonymous" src="assets/image/05.png" title="Image 5">
+        <img id="image6" crossorigin="anonymous" src="assets/image/06.png" title="Image 6">
+        <img id="image7" crossorigin="anonymous" src="assets/image/07.png" title="Image 7">
+        <img id="image8" crossorigin="anonymous" src="assets/image/08.png" title="Image 8">
+        <img id="image9" crossorigin="anonymous" src="assets/image/09.png" title="Image 9">
+        <img id="image10" crossorigin="anonymous" src="assets/image/10.png" title="Image 10">
+        <img id="image11" crossorigin="anonymous" src="assets/image/11.png" title="Image 11">
+        <img id="image12" crossorigin="anonymous" src="assets/image/12.png" title="Image 12">
+        <img id="image13" crossorigin="anonymous" src="assets/image/13.png" title="Image 13">
+        <img id="image14" crossorigin="anonymous" src="assets/image/14.png" title="Image 14">
+        <img id="image15" crossorigin="anonymous" src="assets/image/15.png" title="Image 15">
+        <img id="image16" crossorigin="anonymous" src="assets/image/16.png" title="Image 16">
+        <img id="image17" crossorigin="anonymous" src="assets/image/17.png" title="Image 17">
+        <img id="image18" crossorigin="anonymous" src="assets/image/18.png" title="Image 18">
+        <img id="image19" crossorigin="anonymous" src="assets/image/19.png" title="Image 19">
+        <img id="image20" crossorigin="anonymous" src="assets/image/20.png" title="Image 20">
+    </a-assets>
+    <a-scene>
+        <!-- Titik awal -->
+        <a-sky id="image-360" src="#image1"></a-sky>
+        <!-- Entitas navigasi -->
+        <a-entity id="navigation" position="0 1 -3">
+            <!-- Tombol navigasi -->
+            <a-box color="#4CC3D9" depth="0.5" height="0.5" width="0.5" position="-1 1.6 -3" onclick="changeImage('prev')">
+                <a-text value="◀" color="#FFF" align="center" position="0 0 0.5"></a-text>
+            </a-box>
+            <a-box color="#4CC3D9" depth="0.5" height="0.5" width="0.5" position="1 1.6 -3" onclick="changeImage('next')">
+                <a-text value="▶" color="#FFF" align="center" position="0 0 0.5"></a-text>
+            </a-box>
+        </a-entity>
+        <!-- Contoh entitas di sekitar a-sky -->
+        <a-entity position="0 1 -3">
+            <a-text value="Selamat datang di Virtual Tour!" color="#FFF" align="center" position="0 2 -4"></a-text>
+        </a-entity>
+        <!-- Container untuk entitas yang akan ditambahkan secara dinamis -->
+        <a-entity id="dynamic-entities"></a-entity>
+    </a-scene>
+
+    <a-scene>
+        <!-- Titik awal -->
+        <a-sky id="image-360" src="#image2"></a-sky>
+        <!-- Entitas navigasi -->
+        <a-entity id="navigation" position="0 1 -3">
+            <!-- Tombol navigasi -->
+            <a-box color="#4CC3D9" depth="0.5" height="0.5" width="0.5" position="-1 1.6 -3" onclick="changeImage('prev')">
+                <a-text value="◀" color="#FFF" align="center" position="0 0 0.5"></a-text>
+            </a-box>
+            <a-box color="#4CC3D9" depth="0.5" height="0.5" width="0.5" position="1 1.6 -3" onclick="changeImage('next')">
+                <a-text value="▶" color="#FFF" align="center" position="0 0 0.5"></a-text>
+            </a-box>
+        </a-entity>
+        <!-- Contoh entitas di sekitar a-sky -->
+        <a-entity position="0 1 -3">
+            <a-text value="Selamat datang di Virtual Tour!" color="#FFF" align="center" position="0 2 -4"></a-text>
+        </a-entity>
+        <!-- Container untuk entitas yang akan ditambahkan secara dinamis -->
+        <a-entity id="dynamic-entities"></a-entity>
+    </a-scene>
+</body>
+</html>

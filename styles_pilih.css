@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+.nav-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    justify-content: center;
+}
+
+.nav-buttons button {
+    padding: 15px 25px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Menyesuaikan ukuran font */
+}
+
+.nav-buttons button:hover {
+    background-color: #0056b3;
+}
